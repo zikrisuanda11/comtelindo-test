@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TankController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('dashboard');
 });
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+Route::get('/table', function () {
+    return view('table');
+});
+
+Route::get('/tank', [TankController::class, 'index']);
+Route::get('/data-tank', [TankController::class, 'show']);
+Route::get('/get-tank/{id}', [TankController::class, 'edit']);
+Route::post('/add-tank', [TankController::class, 'store']);
+Route::put('/update-tank/{id}', [TankController::class, 'update']);
+Route::delete('/delete-tank/{id}', [TankController::class, 'destroy']);
+
+
