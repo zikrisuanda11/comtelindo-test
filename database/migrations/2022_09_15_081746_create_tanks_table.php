@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('tanks', function (Blueprint $table) {
             $table->id();
+            $table->string('nama', 45);
             $table->enum('status', ['normal', 'refuelling', 'kurang_dari_target']);
             $table->integer('volume');
             $table->integer('temperature');

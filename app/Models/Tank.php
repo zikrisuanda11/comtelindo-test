@@ -12,6 +12,7 @@ class Tank extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
+        'nama',
         'status',
         'volume',
         'temperature',
