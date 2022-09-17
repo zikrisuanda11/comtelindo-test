@@ -25,7 +25,7 @@ class TankFactory extends Factory
         ]);
 
         return [
-            'nama' => $this->faker->name(),
+            'nama' => $this->faker->word(),
             'status' => $status->random(),
             'volume' => $this->faker->numberBetween(100, 10000),
             'temperature' => $this->faker->randomNumber(2, false),
