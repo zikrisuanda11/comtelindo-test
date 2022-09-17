@@ -17,13 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect('/dashboard');
 });
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-Route::get('/table', function () {
-    return view('table');
-});
 
+Route::get('/dashboard', [TankController::class, 'dashboard']);
+Route::get('/chart', [TankController::class, 'chart']);
 Route::get('/tank', [TankController::class, 'index']);
 Route::get('/data-tank', [TankController::class, 'show']);
 Route::get('/get-tank/{id}', [TankController::class, 'edit']);

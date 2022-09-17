@@ -131,4 +131,14 @@ class TankController extends Controller
             'message' => $data
         ], Response::HTTP_OK);
     }
+
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
+
+    public function chart()
+    {
+        return view('chart');
+    }
 }
