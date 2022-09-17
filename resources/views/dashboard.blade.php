@@ -31,7 +31,7 @@
                                     <thead class="bg-gradient-primary text-white">
                                         <tr>
                                             <th>ID</th>
-                                            <th>Nama</th>
+                                            <th>Nama Tanki</th>
                                             <th>Status</th>
                                             <th>Volume</th>
                                             <th>Temperature</th>
