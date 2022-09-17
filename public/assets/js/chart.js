@@ -319,24 +319,14 @@ $(document).ready(function () {
                 }
             }
             
-            let volume = [];
+            let date = [];
             response.data.forEach(function (i) {
-                volume.push(i.created_at);
+                date.push(i.created_at);
             });
 
-            let temperature = [];
-            response.data.forEach(function (i) {
-                temperature.push(i.created_at);
-            });
-
-            let kapasitas_maksimum = [];
-            response.data.forEach(function (i) {
-                kapasitas_maksimum.push(i.created_at);
-            });
-
-            $('#tanggal-volume').text(formatDate(volume[0]));
-            $('#tanggal-temperature').text(formatDate(temperature[0]));
-            $('#tanggal-kapasitas-maksimum').text(formatDate(kapasitas_maksimum[0]));
+            $('#tanggal-volume').text(formatDate(date[0]));
+            $('#tanggal-temperature').text(formatDate(date[0]));
+            $('#tanggal-kapasitas-maksimum').text(formatDate(date[0]));
         }
     });
 
